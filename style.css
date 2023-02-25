@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+
+  --font-inter: "Inter", sans-serif;
+  --body-copy: 32px;
+
+  --font-weight300: 300;
+  --font-weight500: 500;
+  --font-weight700: 700;
+}
+
+main {
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(./images/pattern-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
