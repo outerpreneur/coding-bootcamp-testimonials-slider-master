@@ -12,12 +12,139 @@
   --font-weight700: 700;
 }
 
-main {
-  min-height: 100vh;
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-image: url(./images/pattern-bg.svg);
-  background-size: cover;
+  background-image: url(./images/pattern-curve.svg);
   background-repeat: no-repeat;
+  background-position: bottom left;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-height: 100vh;
+  width: 70%;
+  background-image: url(./images/pattern-bg.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-inter);
+}
+
+.slider-section {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-inner-section {
+  display: flex;
+}
+
+.slider-text-inside {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2em;
+  justify-content: center;
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: 0 10%;
+  align-self: center;
+  flex: 1;
+}
+
+.image-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider-inner-section img {
+  flex: 1;
+  object-fit: contain;
+  box-shadow: -1px 21px 48px -4px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: -1px 21px 48px -4px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 21px 48px -4px rgba(0, 0, 0, 0.34);
+  margin: 0 auto;
+}
+
+.slider-text-inside p {
+  font-size: 2.2em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--body-copy);
+  overflow: visible;
+}
+
+.slider-text-inside h2 {
+  display: inline-block;
+}
+
+.slider-text-inside span {
+  color: var(--Grayish-Blue);
+  font-size: 1.3em;
+  margin-left: 0.3em;
+}
+
+.slider-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 1.7em 2em;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+}
+
+.slider-button img {
+  cursor: pointer;
+}
+
+.slider-button img:first-child {
+  margin-right: 3.7em;
+}
+
+@media (max-width: 1200px) {
+  body {
+    height: 1200px;
+  }
+
+  main {
+    height: 1200px;
+    width: 100%;
+  }
+
+  .slider-inner-section {
+    flex-direction: column-reverse;
+  }
+
+  .slider-inner-section img {
+    width: 90%;
+    margin: 4em auto;
+  }
+
+  .slider-button {
+    left: 50%;
+    right: 50%;
+  }
+
+  .slider-text-inside {
+    padding: 1em;
+  }
 }
